@@ -1,12 +1,11 @@
 
 body{
-  margin: 15% 5%;
-}
-#submit{
-  position: absolute;
-  width: 30px;
-  right: 5%;
-  top: 3%;
+  margin: 5%;
+}h1{
+  font-size: 26px; 
+  font-weight: bold; 
+  margin-top: 2%;
+  position: relative;
 }
 .container-login100 {
   width: 100%;  
@@ -172,4 +171,56 @@ a.selected{
   text-align: center;
   color: #f31f1f;
   padding: 20px;
+}
+  /*------------------------------------------------------------------
+[ Modal ]*/
+.modal-header{
+  border: none;
+  padding-bottom: 0;
+}.modal-body{
+  padding: 10;
+  padding-top: 5;
+}
+.modal-backdrop {
+  visibility: hidden;
+}.modal-content{
+  width: 100%;
+  height: 100%;
+}.attendees-list {
+  padding: 0 !important;
+}.modal-dialog{
+  width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ form[role="search"] {
+  position: static;
+  top: 0px;
+  right: 0px;
+  width: 90%;
+  padding: 0px;
+  margin: auto;
+  z-index: 0;
+}
+ form[role="search"] button,
+ form[role="search"] input {
+  padding: 10px 12px;
+  border-radius: 50px;
+  border-width: 0px;
+  color: rgb(119, 119, 119);
+  background-color: rgb(248, 248, 248);
+  border-color: rgb(231, 231, 231);
+  box-shadow: none;
+  outline: none;
+}
+ form[role="search"] input {
+  padding: 20px 16px;
+  font-size: 12pt;
+  color: rgb(160, 160, 160);
+  box-shadow: none;
+}
+ form[role="search"] button[type="reset"] {
+  display: none;
 }

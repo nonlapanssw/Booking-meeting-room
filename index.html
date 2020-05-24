@@ -19,13 +19,21 @@
     <link rel="stylesheet" href="/booking.css">
 </head>
 <header>
-    <img id='submit' onclick="submit()"
-        src='https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/bluesea%2Fcorrect%20(1).png?alt=media&token=81774c9a-bdff-4a24-afbb-66a04e8f19b2'>
-</header>
+    <svg class="bi bi-x" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z" />
+        <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z" />
+    </svg>
+    <svg class="bi bi-check-circle-fill" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+    </svg></header>
 
 <body>
 
-    <h1 style="font-size: 32px; font-weight: bold; margin-top: 2%;position: relative;">Booking room</h1>
+    <h1>Booking room</h1>
 
     <div class="container-login100">
         <div class="wrap-login100 p-t-30 p-b-50">
@@ -62,30 +70,78 @@
         <div class="wrap-login100 p-t-30 p-b-50">
             <form class="login100-form validate-form p-b-33 p-t-5"></form>
             <div class="wrap-input100 validate-input">
-                <button type="input" id="date" class="btn btn-info btn-lg">Attendees ></button>
+                <button type="input" id="attendee" class="btn btn-info btn-lg" data-toggle="modal"
+                    data-target="#attendees-list">Attendees ></button>
             </div>
             </form>
-        </div>
-
-        <div class="wrap-login100 p-t-30 p-b-50">
-            <form class="login100-form validate-form p-b-33 p-t-5">
-                <div class="wrap-input100 validate-input">
-                    <div>Guest <label class="switch">
-                            <input id='guest' type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label></div>
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg" id="attendees-list" tabindex="-1" role="dialog"
+                aria-labelledby="attendees-list" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <svg class="bi bi-arrow-left" width="2em" height="2em" viewBox="0 0 16 16"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">
+                                    <svg class="bi bi-check-circle-fill" width="1.5em" height="1.5em"
+                                        viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class="modal-title" id="exampleModalLabel">Meeting owner</h1><br>
+                            <form class="navbar-form" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-search">
+                                                <span class="sr-only">Search</span>
+                                            </span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Default checkbox
+                                </label>
+                              </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="wrap-input100 validate-input">
-                    <input id='request' class="input100" type="text" placeholder="Special Request">
-                    <span class="focus-input100" data-placeholder="&#xe80f;"><i
-                            class="fa fa-lg fa-plus-circle"></i></span>
-                </div>
-            </form>
+            </div>
+
         </div>
-
-
 
     </div>
+
+    <div class="wrap-login100 p-t-30 p-b-50">
+        <form class="login100-form validate-form p-b-33 p-t-5">
+            <div class="wrap-input100 validate-input">
+                <div>Guest <label class="switch">
+                        <input id='guest' type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label></div>
+            </div>
+            <div class="wrap-input100 validate-input">
+                <input id='request' class="input100" type="text" placeholder="Special Request">
+                <span class="focus-input100" data-placeholder="&#xe80f;"><i class="fa fa-lg fa-plus-circle"></i></span>
+            </div>
+        </form>
+    </div>
+
+
 
 
     <script>
@@ -106,14 +162,14 @@
 
         function submit() {
             {
-            var topic = document.getElementById("topic").value
-            var notes = document.getElementById("notes").value
-            var date = document.getElementById("date").value
-            var start = document.getElementById("start-time").value
-            var end = document.getElementById("end-time").value
-            var request = document.getElementById("request").value
-            var guest = document.getElementById("guest").checked
-        }
+                var topic = document.getElementById("topic").value
+                var notes = document.getElementById("notes").value
+                var date = document.getElementById("date").value
+                var start = document.getElementById("start-time").value
+                var end = document.getElementById("end-time").value
+                var request = document.getElementById("request").value
+                var guest = document.getElementById("guest").checked
+            }
         }
 
 
