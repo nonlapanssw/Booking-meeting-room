@@ -216,13 +216,20 @@
             var request = document.getElementById("request").value
             var guest = document.getElementById("guest").checked
 
-            //var d = [topic, notes, date, start, end, request, guest, attendees]
+            var d = [topic, notes, date, start, end, request, guest, attendees]
 
-            //if (topic || date || start || end == null) {
-            //alert("Fill up detail")
-            //} else
-            if (end < start) {
-                alert("End time incorrect")
+            if(topic==""){
+                alert("Fill up topic");
+            }else if(notes==""){
+                alert("Fill up notes");
+            }else if(date==""){
+                alert("Fill up date");
+            }else if(attendees==""){
+                alert("Select attendees");
+            }else if(start==""||end==""){
+                alert("Fill up time");
+            } else if (end <= start) {
+                alert("End time incorrect");
             } else {
                 sessionStorage.setItem("topic", topic);
                 sessionStorage.setItem("notes", notes);
