@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/css/bootstrap-material-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/js/bootstrap-material-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="/booking.css">
+</head>
+
+<body>
+
+
+                <div class="modal-header">
+                    <svg class="bi bi-arrow-left" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z" />
+                        <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <svg class="bi bi-check-circle-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="modal-title" id="exampleModalLabel">Meeting detail</h1><br>
+                    <p id="topic"></p>
+                    <p id="notes"></p>
+                    <p id="date"></p>
+                    <p id="time"></p>
+                    <p id="attendees"></p>
+                    <p id="request"></p>
+                    <p id="guest"></p>
+                </div>
+            </div>
+     
+
+    <script>
+        topic=sessionStorage.getItem("topic");
+        notes=sessionStorage.getItem("notes");
+        date=sessionStorage.getItem("date");
+        start=sessionStorage.getItem("start");
+        end=sessionStorage.getItem("end");
+        //attendees=sessionStorage.getItem("attendees");
+        request=sessionStorage.getItem("request");
+        guest=sessionStorage.getItem("guest");
+        attendees = JSON.parse(localStorage.attendees);
+
+        if(guest=false){
+            document.getElementById("guest").innerHTML="Have a guest"
+        }else{
+            document.getElementById("guest").innerHTML="No guest"
+        }
+
+        document.getElementById("topic").innerHTML=topic
+        document.getElementById("notes").innerHTML=notes
+        document.getElementById("date").innerHTML=date
+        document.getElementById("time").innerHTML=start+"-"+end
+        document.getElementById("attendees").innerHTML=attendees
+        document.getElementById("request").innerHTML=request
+        
+
+
+    </script>
+
+</body>
+
+</html>

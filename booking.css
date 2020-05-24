@@ -224,3 +224,12 @@ a.selected{
  form[role="search"] button[type="reset"] {
   display: none;
 }
+#form-check{
+  padding: 20px;
+  font-size: 18px;
+  line-height: 2;
+}#form-check input{
+  background-color: #f31f1f;
+  right: 5%;
+  width: 20px;
+}
