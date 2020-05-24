@@ -25,7 +25,7 @@
             d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z" />
         <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z" />
     </svg>
-    <svg onclick="submit()" class="bi bi-check-circle-fill" width="2em" height="2em" viewBox="0 0 16 16"
+    <svg onclick="submit()" id="submit" class="bi bi-check-circle-fill" width="2em" height="2em" viewBox="0 0 16 16"
         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd"
             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
@@ -39,11 +39,20 @@
         <div class="wrap-login100 p-t-30 p-b-50">
             <form class="login100-form validate-form p-b-33 p-t-5">
                 <div class="wrap-input100 validate-input">
+                    <svg class="bi bi-chat-square" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M14 1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.5a2 2 0 0 1 1.6.8L8 14.333 9.9 11.8a2 2 0 0 1 1.6-.8H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    </svg>
                     <input id='topic' class="input100" type="text" placeholder="Topic">
                     <span class="focus-input100" data-placeholder="&#xe82a;"></span>
                 </div>
-
                 <div class="wrap-input100 validate-input">
+                    <svg class="bi bi-filter-left" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
                     <input id='notes' class="input100" type="text" placeholder="Notes">
                     <span class="focus-input100" data-placeholder="&#xe80f;"><i
                             class="fa fa-lg fa-plus-circle"></i></span>
@@ -54,39 +63,50 @@
         <div class="wrap-login100 p-t-30 p-b-50">
             <form class="login100-form validate-form p-b-33 p-t-5">
                 <div class="wrap-input100 validate-input">
+                    <svg class="bi bi-calendar" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
+                        <path fill-rule="evenodd"
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z" />
+                    </svg>
                     <label for="date">Date</label><input type="input" id="date" class="btn btn-info btn-lg"></input>
                 </div>
                 <div class="wrap-input100 validate-input">
-                    <label for="start-time">Start time</label><input type="input" id="start-time"
+                    <svg class="bi bi-clock" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z" />
+                        <path fill-rule="evenodd"
+                            d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <label for="start-time">Start Time</label><input type="input" id="start-time"
                         class="btn btn-info btn-lg"></input>
                 </div>
                 <div class="wrap-input100 validate-input">
-                    <label for="end-time">End time</label><input type="input" id="end-time"
+                    <label for="end-time">End Time</label><input type="input" id="end-time"
                         class="btn btn-info btn-lg"></input>
                 </div>
             </form>
         </div>
 
         <div class="wrap-login100 p-t-30 p-b-50">
-            <form class="login100-form validate-form p-b-33 p-t-5"></form>
-            <div class="wrap-input100 validate-input">
-                <button type="input" id="attendee" class="btn btn-info btn-lg" data-toggle="modal"
-                    data-target="#attendees-list">Attendees ></button>
+            <div style="border: 1px solid; padding: 10px;   border-radius: 10px;
+            " class="wrap-input100 validate-input" type="input" id="attendee" class="btn btn-info btn-lg" data-toggle="modal"
+            data-target="#attendees-list">
+                <svg class="bi bi-person" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                </svg>
+               <p style="margin-top:5px; left: 0px;">Attendees > </p>
             </div>
-            </form>
             <!-- Modal -->
             <div class="modal fade bd-example-modal-lg" id="attendees-list" tabindex="-1" role="dialog"
                 aria-labelledby="attendees-list" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <svg class="bi bi-arrow-left" width="2em" height="2em" viewBox="0 0 16 16"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z" />
-                                <path fill-rule="evenodd"
-                                    d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                            </svg>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">
                                     <svg class="bi bi-check-circle-fill" width="1.5em" height="1.5em"
@@ -134,12 +154,23 @@
     <div class="wrap-login100 p-t-30 p-b-50">
         <form class="login100-form validate-form p-b-33 p-t-5">
             <div class="wrap-input100 validate-input">
-                <div>Guest <label class="switch">
+                <svg class="bi bi-bag-dash" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M14 5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5zM1 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4H1z" />
+                    <path d="M8 1.5A2.5 2.5 0 0 0 5.5 4h-1a3.5 3.5 0 1 1 7 0h-1A2.5 2.5 0 0 0 8 1.5z" />
+                    <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
+                </svg>
+                <div style="padding-top:15px; color: darkgray;">Guest</div>
+                    <label class="switch">
                         <input id='guest' type="checkbox">
                         <span class="slider round"></span>
                     </label></div>
-            </div>
+            
             <div class="wrap-input100 validate-input">
+                <span class="material-icons">
+                    face
+                </span>
                 <input id='request' class="input100" type="text" placeholder="Special Request">
                 <span class="focus-input100" data-placeholder="&#xe80f;"><i class="fa fa-lg fa-plus-circle"></i></span>
             </div>
@@ -150,7 +181,7 @@
 
 
     <script>
-        var attendees =[]
+        var attendees = []
         $('input:checkbox').change(function () {
             var isChecked = $('input:checkbox:checked').map(function () {
                 return this.value;
@@ -163,7 +194,8 @@
         $(function () {
             $('#date').bootstrapMaterialDatePicker({
                 time: false,
-                monthPicker: true
+                monthPicker: true,
+                format : 'DD MMMM YYYY'
             });
 
         });
@@ -183,11 +215,12 @@
             var end = document.getElementById("end-time").value
             var request = document.getElementById("request").value
             var guest = document.getElementById("guest").checked
+
             //var d = [topic, notes, date, start, end, request, guest, attendees]
 
             //if (topic || date || start || end == null) {
-              //  alert("Fill up detail")
-            //} else 
+            //alert("Fill up detail")
+            //} else
             if (end < start) {
                 alert("End time incorrect")
             } else {
@@ -196,11 +229,11 @@
                 sessionStorage.setItem("date", date);
                 sessionStorage.setItem("start", start);
                 sessionStorage.setItem("end", end);
-               // sessionStorage.setItem("attendees", attendees);
                 sessionStorage.setItem("request", request);
                 sessionStorage.setItem("guest", guest);
-                localStorage.attendees=JSON.stringify(attendees)
+                localStorage.attendees = JSON.stringify(attendees)
                 window.location.href = "/meeting-detail.html"
+                delete (topic, notes, date, start, end, request, guest, attendees)
             }
 
 

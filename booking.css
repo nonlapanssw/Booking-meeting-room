@@ -1,4 +1,7 @@
-
+#submit{
+  position: absolute;
+  right: 5%;
+}
 body{
   margin: 5%;
 }h1{
@@ -9,7 +12,7 @@ body{
 }
 .container-login100 {
   width: 100%;  
-  min-height: 100vh;
+  min-height: 60vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -74,29 +77,64 @@ body{
   position: relative;
   padding: 0 0;
   border: none;
+  display: inline-flex;
+  line-height: 1;
+}
+.wrap-login100 svg,.wrap-login100 span{
+  margin: auto;
+  margin-left: 5%;
 }
 
-.input100 ,.wrap-input100 input,.wrap-input100 button,.wrap-input100 div{
+.input100 ,.wrap-input100 input,.wrap-input100 div{
   font-size: 14px;
-  color:rgb(80, 55, 55);
+  font-weight: 500;
   line-height: 1.2;
+  margin-left: 2%;
   display: block;
-  width: 100%;
+  width: 90%;
   height: 50px;
   background: transparent;
-  padding: 0 10px 0 60px;
+  padding: 0 10px 0 40px;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
   border: none;
   border-bottom: 2px solid #e6e6e6;
+  text-align: left;
+  color: #f31f1f;
+
+}#attendee{
+  font-size: 16px;
+  
+}
+.wrap-input100 button{
+  line-height: 1.2;
+  border: none;
+  background: transparent;
+}label{
+  text-align: center;
+  margin: auto;
+  margin-right: 10px;
+  width: auto;
+  float: right;
+  font-weight: normal;
+}#date,#start-time,#end-time{
+  text-align: right;
+  padding-right: 10%;
+  font-weight: 600;
+  font-size: 14px;
+  width: 50%;
+  color: #f31f1f;
+}#date:hover,#start-time:hover,#end-time:hover{
+  background-color: #fff;
 }
 .switch {
-  position: relative;
-  display: inline-block;
+  margin-top: 15px;
+  position: absolute;
   width: 35px;
   height: 20px;
+  right:10%;
 }
 
 .switch input { 
@@ -104,7 +142,6 @@ body{
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -228,8 +265,26 @@ a.selected{
   padding: 20px;
   font-size: 18px;
   line-height: 2;
-}#form-check input{
-  background-color: #f31f1f;
-  right: 5%;
-  width: 20px;
+}#form-check input[type="checkbox"]{
+  position: absolute;
+  right: 7%;
+  width: 50px;
+  height: 20px;
+  line-height: 2;
+}[type="checkbox"]:checked{
+  color: #f31f1f;
+  background: #fff;
+  color: #333;
+  content: "\2713";
+  text-align: center;
+}@media screen and (min-width: 1000px) {
+  body{
+    margin: 2% 5%;
+  }#date,#start-time,#end-time{
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    width: 80%;
+    color: #f31f1f;
+}
 }
